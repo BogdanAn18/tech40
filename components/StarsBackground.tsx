@@ -19,7 +19,7 @@ export default function StarsBackground() {
     window.addEventListener("resize", resize);
 
     const stars: { x: number; y: number; radius: number; opacity: number; speed: number }[] = [];
-    const quantityOfStarts = window.innerWidth / 10;
+    const quantityOfStarts = window.innerWidth / 5;
 
     for (let i = 0; i < quantityOfStarts; i++) {
       stars.push({
@@ -61,7 +61,7 @@ export default function StarsBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute top-0 left-0 w-full h-full -z-10"
+      className="w-full h-full"
       style={{ background: "radial-gradient(circle at center, var(--dark-blue) 0%, black 100%)" }}
     />
   );

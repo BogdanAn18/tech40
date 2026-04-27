@@ -6,6 +6,8 @@
   --primary-blue: #2d75e9;
   --dark-blue: #0a0a2a;
   --light-blue: #60a5fa;
+  --main-green: #a7fc00;
+  --main-purple: #bd33a4;
 }
 
 @theme inline {
@@ -50,8 +52,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'DrukWide';
+  src: url('/fonts/DrukCyrBold/DrukCyr-Super.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
@@ -79,4 +89,17 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #60a5fa;
+}
+
+@keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.bg-300\% {
+    background-size: 300% 300%;
+}
+
+.animate-gradient {
+    animation: gradient 3s ease infinite;
 }
