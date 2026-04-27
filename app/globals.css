@@ -3,11 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-blue: #2d75e9;
-  --dark-blue: #0a0a2a;
-  --light-blue: #60a5fa;
-  --main-green: #a7fc00;
-  --main-purple: #bd33a4;
+  --base-color: #ffe5af;
+  --second-color: #f49b6d;
+  --official-color: #217bc0;
+  --active-color: #ea5599;
 }
 
 @theme inline {
@@ -17,47 +16,21 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 @font-face {
-  font-family: 'Caveat';
-  src: url('/fonts/Caveat/Caveat-VariableFont_wght.ttf') format('truetype-variations');
+  font-family: 'Sans-light';
+  src: url('/fonts/sb-sans-display-light.otf') format('opentype');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Jost';
-  src: url('/fonts/Jost/Jost-VariableFont_wght.ttf') format('truetype-variations');
+  font-family: 'Sans-semibold';
+  src: url('/fonts/sb-sans-display-semibold.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'LibMath';
-  src: url('/fonts/LibertinusMath/LibertinusMath-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Pacifico';
-  src: url('/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DrukWide';
-  src: url('/fonts/DrukCyrBold/DrukCyr-Super.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 html {
   scroll-behavior: smooth;
@@ -67,11 +40,28 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Jost, sans-serif;
+  font-family: Sans-light;
 }
 
-.math {
-  font-family: 'Libertinus Math', serif;
+h1{
+  font-family: Sans-semibold;
+  font-size: 2rem;
+  color: gray;
+}
+h2{
+  font-family: Sans-semibold;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+h3{
+  font-family: Sans-light;
+}
+
+p{
+  font-family: Sans-light;
+  color: gray;
+  font-weight: 400;
 }
 
 ::-webkit-scrollbar {
