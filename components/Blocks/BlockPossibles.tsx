@@ -5,6 +5,6 @@ import HorizontalScroll from "@/components/HorizontalScroll"
 
 export default function BlockPossibles() {
     return (
-        <></>
+        <HorizontalScroll></HorizontalScroll>
     )
 }
