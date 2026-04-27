@@ -1,0 +1,10 @@
+.cardBorder{
+    background-color: var(--dark-blue);
+    border: 2px solid var(--primary-blue);
+    margin: 15px;
+    padding: 10px;
+    color: white;
+}
+.cardTitle{
+    font-family: Pacifico;
+}
