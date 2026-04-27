@@ -12,7 +12,8 @@ export default function SignUp() {
     email: "",
     password: "",
     birthDate: "",
-    currentClass: ""
+    currentClass: "",
+    role: "NOVICE"
   })
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
@@ -108,6 +109,16 @@ export default function SignUp() {
             onChange={handleChange}
             className="w-full px-3 py-2 border rounded"
           />
+          <select
+            name="role"
+            value={formData.role}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border rounded"
+          >
+            <option value="NOVICE">Новичок</option>
+            <option value="EMPLOYEE">Сотрудник компании</option>
+            <option value="ENTREPRENEUR">Предприниматель</option>
+          </select>
           <button
             type="submit"
             disabled={loading}

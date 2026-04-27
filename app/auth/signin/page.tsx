@@ -32,7 +32,7 @@ export default function SignIn(){
             if (result?.error) {
                 setError("Invalid credentials")
             } else {
-                router.push("/home")
+                router.push("/")
             }
         } catch (error) {
             setError("An error occurred")
@@ -50,7 +50,7 @@ export default function SignIn(){
 
     return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow">
+      <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg text-black shadow">
         <h2 className="text-center text-3xl font-bold">Sign In</h2>
         {error && <p className="text-red-500 text-center">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">

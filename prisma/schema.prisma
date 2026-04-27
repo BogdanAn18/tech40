@@ -13,6 +13,7 @@ model User {
   secondName  String?
   email       String   @unique
   password    String
+  role        String   @default("NOVICE")
   birthDate   DateTime?
   currentClass String?
   country     String?
