@@ -1,24 +1,70 @@
-# Development
-TODO сделать новое лого (done)-> почитать про useState -> сделать свой vpn -> Задача про колебания шарика из гелия c привязанной нитью (T = 10 секунды)
+# Welcome Guide — Центр исследований и разработки Сбера
 
-## About
+Онбординг-лендинг для новых сотрудников Центра исследований и разработки Сбера в Нижнем Новгороде. Вся необходимая информация для быстрой и комфортной адаптации в компании.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Стек
 
-## Getting Started
+- **Next.js** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
 
-First, run the development server:
+## Структура
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+src/
+├── app/
+│   ├── globals.css          # Глобальные стили и шрифты
+│   ├── layout.tsx           # Корневой лейаут
+│   └── page.tsx             # Главная страница
+├── components/
+│   ├── Card/
+│   │   └── QuestionCard.tsx # Аккордеон для FAQ
+│   ├── BlockHero.tsx        # Первый экран
+│   ├── BlockInfo.tsx        # О нас
+│   ├── BlockPossibles.tsx   # Возможности и программа лояльности
+│   ├── BlockCoworking.tsx   # Бронирование коворкинга
+│   ├── BlockContacts.tsx    # Контакты
+│   ├── BlockNovice.tsx      # Чек-лист новичка
+│   ├── BlockFAQ.tsx         # Частые вопросы
+│   └── BlockStars.tsx       # Отзывы
+└── public/
+    └── img/
+        ├── center_photo/    # Фото офиса и мероприятий
+        ├── gym_photo/       # Фото спортзала
+        └── images/          # Иконки и декоративные изображения
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Блоки
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Блок | Описание |
+|------|----------|
+| Hero | Заглавный экран с названием центра |
+| О нас | Миссия, ценности, ссылка на статью в СМИ |
+| Возможности | Карточки с преимуществами для сотрудников |
+| Коворкинг | Виджет бронирования рабочих мест |
+| Контакты | Карточки ответственных лиц |
+| Новичкам | Чек-лист адаптации с группировкой по этапам |
+| FAQ | Аккордеон с частыми вопросами |
+| Отзывы | Цитаты сотрудников и партнёров |
+
+## Дизайн
+
+Минимализм, единая стилистика всех блоков:
+- Белые карточки с серой рамкой и скруглением
+- Аккордеоны с анимацией плюсика
+- Декоративные фоновые изображения
+- Фирменные шрифты SB Sans Display
+- Адаптивная вёрстка
+
+## Запуск
+
+```bash
+# Установка зависимостей
+npm install
+
+# Dev-сервер
+npm run dev
+
+# Сборка
+npm run build
