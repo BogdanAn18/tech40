@@ -5,7 +5,7 @@ import Image from "next/image"
 const opportunities = [
     {
         id: 1,
-        icon: "/img/images/22.png",
+        icon: "/img/images/gym.jpg",
         title: "Спортзалы",
         description: "Тренировки рядом с офисом",
         features: [
@@ -17,7 +17,7 @@ const opportunities = [
     },
     {
         id: 2,
-        icon: "/img/images/30.png",
+        icon: "/img/images/cowork.jpg",
         title: "Коворкинг",
         description: "Всё для продуктивной работы",
         features: [
@@ -29,7 +29,7 @@ const opportunities = [
     },
     {
         id: 3,
-        icon: "/img/images/23.png",
+        icon: "/img/images/tennis.jpg",
         title: "Обучение",
         description: "Мастер-классы и тренинги",
         features: [
@@ -41,7 +41,7 @@ const opportunities = [
     },
     {
         id: 4,
-        icon: "/img/images/35.png",
+        icon: "/img/images/games.jpg",
         title: "Развлечения",
         description: "Квизы, игры, мероприятия",
         features: [
@@ -53,7 +53,7 @@ const opportunities = [
     },
     {
         id: 5,
-        icon: "/img/images/36.png",
+        icon: "/img/images/cowork2.jpg",
         title: "Кафе и отдых",
         description: "Места для обедов и встреч",
         features: [
@@ -71,6 +71,15 @@ export default function BlockPossibles() {
             <div className="text-center px-6 max-w-6xl w-full relative z-10 py-20">
                 <h2>Программа лояльности</h2>
                 <h3>Скидки до 25% у партнёров</h3>
+
+                <Image
+                    src = "/img/images/percent.jpg"
+                    alt = "Loyality"
+                    width = {400}
+                    height = {400}
+                    >
+
+                </Image>
 
                 {/* Сетка карточек */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
@@ -95,8 +104,8 @@ export default function BlockPossibles() {
                                     <Image
                                         src={item.icon}
                                         alt={item.title}
-                                        width={40}
-                                        height={40}
+                                        width={80}
+                                        height={80}
                                         className="flex-shrink-0"
                                     />
                                     <h2>
