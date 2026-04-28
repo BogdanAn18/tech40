@@ -28,10 +28,10 @@ const contacts = [
 
 export default function BlockContacts() {
     return (
-        <div className="min-h-screen relative flex items-center justify-center novice-section-bg">
+        <div className="min-h-screen relative flex items-center justify-center novice-section-bg" id="contacts">
             {/* Контент */}
             <div className="text-center px-6 max-w-4xl w-full relative z-10 py-20">
-                <h3 className="text-slate-900">К кому я могу обратиться?</h3>
+                <h2>К кому я могу обратиться?</h2>
 
                 {/* Сетка карточек */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
@@ -51,7 +51,7 @@ export default function BlockContacts() {
                             </div>
 
                             {/* Имя */}
-                            <h2 className="mb-1">{contact.name}</h2>
+                            <h3 className="mb-1">{contact.name}</h3>
 
                             {/* Роль */}
                             <p className="mb-2 text-sm text-slate-600">{contact.role}</p>

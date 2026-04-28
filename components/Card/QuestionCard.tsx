@@ -18,7 +18,7 @@ export default function QuestionCard({ question, answer }: QuestionCardProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
       >
-        <span className="font-medium text-gray-800 pr-4">{question}</span>
+        <span className="text-gray-800 pr-4">{question}</span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.2 }}

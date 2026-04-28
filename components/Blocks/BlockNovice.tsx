@@ -1,9 +1,7 @@
 "use client"
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-
-interface Task {
+// Добавьте это определение типа
+type Task = {
     id: number;
     title: string;
     helper: string;
@@ -38,12 +36,6 @@ const taskGroups = [
 ]
 
 export default function BlockNovice() {
-    const [activeId, setActiveId] = useState<number | null>(null)
-
-    const toggleTask = (id: number) => {
-        setActiveId(activeId === id ? null : id)
-    }
-
     return (
         <div className="min-h-screen relative flex items-center justify-center py-12">
             {/* Фон и оверлей */}
@@ -70,44 +62,16 @@ export default function BlockNovice() {
                         <div key={idx} className="bg-white/90 backdrop-blur-sm rounded-xl p-5 border border-gray-200 text-left">
                             <h2 className="mb-4 pb-2 border-b border-gray-300">{group.title}</h2>
                             <div className="space-y-3">
-                                {group.tasks.map((task) => {
-                                    const isOpen = activeId === task.id
-                                    return (
-                                        <div key={task.id} className="border border-gray-200 rounded-xl overflow-hidden">
-                                            <button
-                                                onClick={() => toggleTask(task.id)}
-                                                className="w-full flex items-center justify-between p-3 text-left hover:bg-gray-50 transition-colors bg-white"
-                                            >
-                                                <span className="text-gray-800 text-sm pr-2 font-medium">
-                                                    {task.title}
-                                                </span>
-                                                <motion.span
-                                                    animate={{ rotate: isOpen ? 45 : 0 }}
-                                                    transition={{ duration: 0.2 }}
-                                                    className="text-gray-400 text-lg flex-shrink-0"
-                                                >
-                                                    +
-                                                </motion.span>
-                                            </button>
-                                            <AnimatePresence initial={false}>
-                                                {isOpen && (
-                                                    <motion.div
-                                                        initial={{ height: 0, opacity: 0 }}
-                                                        animate={{ height: "auto", opacity: 1 }}
-                                                        exit={{ height: 0, opacity: 0 }}
-                                                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                                                        className="overflow-hidden"
-                                                    >
-                                                        <div className="px-4 pb-4 pt-1 text-sm text-gray-700 border-t border-gray-100">
-                                                            <span className="font-medium">Кто поможет: </span>
-                                                            {task.helper}
-                                                        </div>
-                                                    </motion.div>
-                                                )}
-                                            </AnimatePresence>
-                                        </div>
-                                    )
-                                })}
+                                {group.tasks.map((task) => (
+                                    <div key={task.id} className="border border-gray-200 rounded-xl p-3 bg-white">
+                                        <p className="text-gray-800 text-sm font-medium mb-1">
+                                            {task.title}
+                                        </p>
+                                        <p className="text-sm text-gray-700">
+                                            Кто поможет: {task.helper}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}

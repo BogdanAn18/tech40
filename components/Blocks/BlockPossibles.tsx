@@ -67,20 +67,10 @@ const opportunities = [
 
 export default function BlockPossibles() {
     return (
-        <div className="min-h-screen relative flex items-center justify-center novice-section-bg">
+        <div className="min-h-screen relative flex items-center justify-center novice-section-bg" id="loyalty">
             <div className="text-center px-6 max-w-6xl w-full relative z-10 py-20">
-                <h2 className="text-slate-900">Программа лояльности</h2>
-                <h3 className="text-slate-700">Скидки до 25% у партнёров</h3>
-
-                <Image
-                    src = "/img/images/percent-nobg.png"
-                    alt = "Loyality"
-                    width = {400}
-                    height = {400}
-                    className="mx-auto block"
-                    >
-
-                </Image>
+                <h2 className="text-3xl text-slate-900 mb-2">Программа лояльности</h2>
+                <h3 className="text-xl text-slate-700 mb-8">Скидки до 25% у партнёров</h3>
 
                 {/* Сетка карточек */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
@@ -100,25 +90,16 @@ export default function BlockPossibles() {
                             </div>
 
                             {/* Текст карточки */}
-                            <div className="p-6 flex flex-col flex-grow">
-                                <div className="flex items-center gap-3 mb-3">
-                                    <Image
-                                        src={item.icon}
-                                        alt={item.title}
-                                        width={100}
-                                        height={100}
-                                        className="flex-shrink-0"
-                                    />
-                                    <h2 className="text-slate-900">
-                                        {item.title}
-                                    </h2>
-                                </div>
+                            <div className="p-6 flex flex-col flex-grow text-left">
+                                <h3 className="text-slate-900 mb-3">
+                                    {item.title}
+                                </h3>
 
                                 <p className="mb-4 text-slate-700">
                                     {item.description}
                                 </p>
 
-                                <ul className="space-y-2 text-left">
+                                <ul className="space-y-2">
                                     {item.features.map((feature, i) => (
                                         <li
                                             key={i}
