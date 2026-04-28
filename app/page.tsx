@@ -16,8 +16,8 @@ export default function Home() {
       <BlockInfo />
       <BlockPossibles />
       <BlockCoworking />
-      <BlockNovice />
       <BlockStars />
+      <BlockNovice />
       <BlockContacts />
       <BlockFAQ />
     </div>
