@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function BlockInfo() {
     return (
-        <div className="min-h-screen relative flex items-center justify-center">
+        <div className="min-h-screen relative flex items-center justify-center novice-section-bg">
             <div className="text-center px-6 max-w-3xl">
                 <p className="
                     mt-2 mb-6 p-3
@@ -12,10 +12,10 @@ export default function BlockInfo() {
                     border-2 border-gray-300 rounded-xl">
                     Мы запускаем проекты для новых возможностей региона
                 </p>
-                <h1 className="text-gray-500">
+                <h1 className="text-slate-900">
                     Наша миссия
                 </h1>
-                <p className="mt-6 mb-8">
+                <p className="mt-6 mb-8 text-slate-700">
                     Мы создаем решения для развития бизнеса через исследования клиентского опыта, 
                     анализ данных, применяя креативный подход и современные технологии.
                 </p>

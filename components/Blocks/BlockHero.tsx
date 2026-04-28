@@ -1,11 +1,10 @@
 "use client"
 
 import Image from "next/image"
-import StarsBackground from "@/components/StarsBackground"
 
 export default function BlockHero(){
     return (
-        <div className="h-screen relative flex items-center justify-center">
+        <div className="h-screen relative flex items-center justify-center novice-section-bg">
             {/* Мобильная версия */}
             <div className="absolute top-5 right-3">
                 <Image
@@ -26,7 +25,7 @@ export default function BlockHero(){
                 </Image>
             </div>
             
-            <h3 className="text-2xl text-gray-500 text-center">
+            <h3 className="text-2xl text-slate-900 text-center">
                 Центр исследований и разработки Сбера
             </h3>
         </div>

@@ -1,28 +1,25 @@
-import { getServerSession } from "next-auth/next"
-import { authOptions } from "@/lib/auth"
-import { redirect } from "next/navigation"
-import RoleSelector from "@/components/RoleSelector"
-import Logo from "@/components/Logo"
+"use client"
 
-export default async function Home() {
-  const session = await getServerSession(authOptions)
+import BlockContacts from '@/components/Blocks/BlockContacts';
+import BlockHero from '@/components/Blocks/BlockHero';
+import BlockInfo from '@/components/Blocks/BlockInfo';
+import BlockPossibles from '@/components/Blocks/BlockPossibles';
+import BlockStars from '@/components/Blocks/BlockStars';
+import BlockFAQ from '@/components/Blocks/BlockFAQ';
+import BlockNovice from '@/components/Blocks/BlockNovice';
+import BlockCoworking from '@/components/Blocks/BlockCoworking';
 
-  if (session) {
-    switch (session.user.role) {
-      case "EMPLOYEE":
-        redirect("/employee")
-      case "ENTREPRENEUR":
-        redirect("/entrepreneur")
-      default:
-        redirect("/novice")
-    }
-  }
-
-  // Для выбора роли
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
-      <Logo />
-      <RoleSelector />
+    <div className="flex flex-col">
+      <BlockHero />
+      <BlockInfo />
+      <BlockPossibles />
+      <BlockCoworking />
+      <BlockNovice />
+      <BlockStars />
+      <BlockContacts />
+      <BlockFAQ />
     </div>
-  ) 
+  )
 }

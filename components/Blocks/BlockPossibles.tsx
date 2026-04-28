@@ -29,7 +29,7 @@ const opportunities = [
     },
     {
         id: 3,
-        icon: "/img/images/tennis.jpg",
+        icon: "/img/images/book.png",
         title: "Обучение",
         description: "Мастер-классы и тренинги",
         features: [
@@ -37,7 +37,7 @@ const opportunities = [
             "Бизнес-тренинги и семинары",
             "Языковые курсы",
         ],
-        image: "/img/gym_photo/IMG_0314.jpeg"
+        image: "/img/center_photo/IMG_0328.jpeg"
     },
     {
         id: 4,
@@ -67,16 +67,17 @@ const opportunities = [
 
 export default function BlockPossibles() {
     return (
-        <div className="min-h-screen relative flex items-center justify-center">
+        <div className="min-h-screen relative flex items-center justify-center novice-section-bg">
             <div className="text-center px-6 max-w-6xl w-full relative z-10 py-20">
-                <h2>Программа лояльности</h2>
-                <h3>Скидки до 25% у партнёров</h3>
+                <h2 className="text-slate-900">Программа лояльности</h2>
+                <h3 className="text-slate-700">Скидки до 25% у партнёров</h3>
 
                 <Image
-                    src = "/img/images/percent.jpg"
+                    src = "/img/images/percent-nobg.png"
                     alt = "Loyality"
                     width = {400}
                     height = {400}
+                    className="mx-auto block"
                     >
 
                 </Image>
@@ -104,16 +105,16 @@ export default function BlockPossibles() {
                                     <Image
                                         src={item.icon}
                                         alt={item.title}
-                                        width={80}
-                                        height={80}
+                                        width={100}
+                                        height={100}
                                         className="flex-shrink-0"
                                     />
-                                    <h2>
+                                    <h2 className="text-slate-900">
                                         {item.title}
                                     </h2>
                                 </div>
 
-                                <p className="mb-4">
+                                <p className="mb-4 text-slate-700">
                                     {item.description}
                                 </p>
 

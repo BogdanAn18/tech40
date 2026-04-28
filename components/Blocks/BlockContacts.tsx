@@ -28,10 +28,10 @@ const contacts = [
 
 export default function BlockContacts() {
     return (
-        <div className="min-h-screen relative flex items-center justify-center">
+        <div className="min-h-screen relative flex items-center justify-center novice-section-bg">
             {/* Контент */}
             <div className="text-center px-6 max-w-4xl w-full relative z-10 py-20">
-                <h3>К кому я могу обратиться?</h3>
+                <h3 className="text-slate-900">К кому я могу обратиться?</h3>
 
                 {/* Сетка карточек */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
@@ -54,7 +54,7 @@ export default function BlockContacts() {
                             <h2 className="mb-1">{contact.name}</h2>
 
                             {/* Роль */}
-                            <p className="mb-2 text-sm">{contact.role}</p>
+                            <p className="mb-2 text-sm text-slate-600">{contact.role}</p>
 
                             {/* Контакт (Telegram) */}
                             {contact.username && (
@@ -62,7 +62,7 @@ export default function BlockContacts() {
                                     href={`https://t.me/${contact.username.replace("@", "")}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-500 hover:text-gray-700 transition-colors font-medium underline text-sm"
+                                    className="text-slate-600 hover:text-slate-800 transition-colors font-medium underline text-sm"
                                 >
                                     {contact.username}
                                 </a>
