@@ -6,6 +6,7 @@ import BlockInfo from '@/components/Blocks/BlockInfo';
 import BlockPossibles from '@/components/Blocks/BlockPossibles';
 import BlockStars from '@/components/Blocks/BlockStars';
 import BlockFAQ from '@/components/Blocks/BlockFAQ';
+import BlockNovice from '@/components/Blocks/BlockNovice';
 
 export default function NovicePage() {
   return (
@@ -13,6 +14,7 @@ export default function NovicePage() {
       <BlockHero />
       <BlockInfo />
       <BlockPossibles />
+      <BlockNovice />
       <BlockStars />
       <BlockContacts />
       <BlockFAQ />

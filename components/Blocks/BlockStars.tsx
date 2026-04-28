@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function BlockStars() {
   return (
-    <div className="flex flex-col items-center justify-center text-center min-h-screen px-6">
+    <div className="flex flex-col items-center justify-center text-center min-h-screen px-6 mt-10">
         <h2>Что пишут о нас?</h2>
         <h4>Из пяти звёздочек нам всегда ставят...</h4>
         <Image
