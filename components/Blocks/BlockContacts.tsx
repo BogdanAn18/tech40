@@ -5,7 +5,7 @@ import Image from "next/image"
 const contacts = [
     {
         id: 1,
-        name: "Иванова Александра",
+        name: "Иванова Светлана",
         username: "@user",
         role: "Специалист по адаптации сотрудников",
         photo: "/img/users/1.jpg" // замени на реальное фото

@@ -12,7 +12,7 @@ const faqData = [
         (запись на групповые занятия по ссылке:{" "}
         <a
           href="#"
-          className="text-blue-600 underline hover:text-blue-800"
+          className="text-gray-600 underline hover:text-gray-800"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -34,7 +34,7 @@ const faqData = [
         Сервис бронирования переговорных/коворкинга по ссылке:{" "}
         <a
           href="#"
-          className="text-blue-600 underline hover:text-blue-800"
+          className="text-gray-600 underline hover:text-gray-800"
           target="_blank"
           rel="noopener noreferrer"
         >
