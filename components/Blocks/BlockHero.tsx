@@ -50,7 +50,7 @@ export default function BlockHero() {
 
       {/* Текстовая часть */}
       <motion.div
-        className="relative z-10 text-center md:text-left max-w-2xl md:mr-8"
+        className="relative z-10 text-center md:text-left max-w-2xl md:mx-8"
         variants={itemVariants}
       >
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-slate-900 mb-4 leading-tight">
