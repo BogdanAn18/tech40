@@ -73,11 +73,8 @@ export default function Navigation() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="fixed top-0 right-0 z-40 h-full w-72 bg-white border-l border-gray-200 flex flex-col"
             >
-              <div className="p-6 pb-4 mt-10 border-b border-gray-100">
-                <h3 className="text-gray-400 text-sm">Навигация</h3>
-              </div>
 
-              <div className="flex flex-col space-y-1 p-6 pt-4 flex-1 overflow-y-auto">
+              <div className="flex flex-col space-y-1 p-6 pt-16 flex-1 overflow-y-auto">
                 {links.map((link) => (
                   <a
                     key={link.href}

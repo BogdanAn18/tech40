@@ -91,11 +91,11 @@ export default function BlockPossibles() {
 
                             {/* Текст карточки */}
                             <div className="p-6 flex flex-col flex-grow text-left">
-                                <h3 className="text-slate-900 mb-3">
+                                <h3 className="text-slate-900">
                                     {item.title}
                                 </h3>
 
-                                <p className="mb-4 text-slate-700">
+                                <p className="mb-4 text-sm">
                                     {item.description}
                                 </p>
 

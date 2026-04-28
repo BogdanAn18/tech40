@@ -18,7 +18,7 @@ export default function QuestionCard({ question, answer }: QuestionCardProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
       >
-        <span className="text-gray-800 pr-4">{question}</span>
+        <h3 className="pr-4">{question}</h3>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.2 }}
@@ -37,9 +37,9 @@ export default function QuestionCard({ question, answer }: QuestionCardProps) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-5 pb-5 text-gray-600 leading-relaxed">
+            <p className="px-5 pb-5 leading-relaxed">
               {answer}
-            </div>
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

@@ -24,7 +24,7 @@ export default function BlockCoworking() {
             />
 
             <div className="text-center px-6 py-20 max-w-2xl w-full relative z-10">
-                <h3>Бронирование коворкинга</h3>
+                <h2>Бронирование коворкинга</h2>
                 <p className="mt-2 mb-8">
                     Для резидентов Центра исследований и разработки Сбера
                 </p>

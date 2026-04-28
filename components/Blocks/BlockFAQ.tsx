@@ -100,7 +100,7 @@ export default function BlockFAQ() {
   return (
     <div className="min-h-screen relative flex items-center justify-center bg-white" id="faq">
       <div className="text-center px-6 max-w-3xl w-full py-20">
-        <h3>FAQ</h3>
+        <h2>FAQ</h2>
         <div className="mt-10 space-y-4 text-left">
           {faqData.map((item, index) => (
             <QuestionCard

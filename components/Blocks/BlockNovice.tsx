@@ -51,7 +51,7 @@ export default function BlockNovice() {
 
             {/* Контент */}
             <div className="relative z-20 w-full max-w-6xl px-6 text-center">
-                <h3 className="text-white mb-2">Новичкам</h3>
+                <h2 className="mb-2" style={{color: "white"}}>Новичкам</h2>
                 <p className="text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
                     Программа адаптации нового сотрудника
                 </p>
@@ -64,9 +64,9 @@ export default function BlockNovice() {
                             <div className="space-y-3">
                                 {group.tasks.map((task) => (
                                     <div key={task.id} className="border border-gray-200 rounded-xl p-3 bg-white">
-                                        <p className="text-gray-800 text-sm font-medium mb-1">
+                                        <h3 className="text-gray-800 font-medium mb-1">
                                             {task.title}
-                                        </p>
+                                        </h3>
                                         <p className="text-sm text-gray-700">
                                             Кто поможет: {task.helper}
                                         </p>

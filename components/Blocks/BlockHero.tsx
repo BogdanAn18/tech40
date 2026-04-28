@@ -25,13 +25,13 @@ export default function BlockHero() {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-slate-900 mb-4 leading-tight">
           Центр исследований и разработки Сбера
         </h1>
-        <p className="text-base sm:text-lg lg:text-xl text-slate-700 mb-2 font-light">
+        <p className="text-base lg:text-xl text-slate-700 mb-2 font-light">
           Мы запускаем проекты для новых возможностей региона
         </p>
-        <h2 className="text-xl sm:text-2xl lg:text-3xl text-slate-900 mt-2 md:mt-8">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl text-slate-900 mt-6 md:mt-8">
           Наша миссия
         </h2>
-        <p className="mt-2 lg:mt-4 text-sm sm:text-base lg:text-lg text-slate-700 leading-relaxed max-w-xl">
+        <p className="mt-2 lg:mt-4 lg:text-xl text-slate-700 leading-relaxed max-w-xl">
           Мы создаем решения для развития бизнеса через исследования клиентского
           опыта, анализ данных, применяя креативный подход и современные
           технологии.

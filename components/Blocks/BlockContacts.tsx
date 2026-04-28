@@ -34,7 +34,7 @@ export default function BlockContacts() {
                 <h2>К кому я могу обратиться?</h2>
 
                 {/* Сетка карточек */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                     {contacts.map((contact) => (
                         <div
                             key={contact.id}
