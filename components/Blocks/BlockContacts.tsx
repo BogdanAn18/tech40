@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const contacts = [
     {
@@ -35,10 +36,22 @@ export default function BlockContacts() {
 
                 {/* Сетка карточек */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                    {contacts.map((contact) => (
-                        <div
+                    {contacts.map((contact, index) => (
+                        <motion.div
                             key={contact.id}
                             className="bg-white rounded-xl border border-gray-100 p-6 flex flex-col items-center"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                    type: "spring",
+                                    stiffness: 100,
+                                    damping: 10,
+                                    delay: index * 0.2,
+                                },
+                            }}
+                            viewport={{ once: true }}
                         >
                             {/* Фото */}
                             <div className="relative w-24 h-24 mb-4 rounded-full overflow-hidden">
@@ -67,7 +80,7 @@ export default function BlockContacts() {
                                     {contact.username}
                                 </a>
                             )}
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

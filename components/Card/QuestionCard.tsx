@@ -9,6 +9,16 @@ interface QuestionCardProps {
   answer: React.ReactNode
 }
 
+const answerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+
 export default function QuestionCard({ question, answer }: QuestionCardProps) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -37,9 +47,14 @@ export default function QuestionCard({ question, answer }: QuestionCardProps) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="px-5 pb-5 leading-relaxed">
+            <motion.p
+              className="px-5 pb-5 leading-relaxed"
+              variants={answerVariants}
+              initial="hidden"
+              animate="visible"
+            >
               {answer}
-            </p>
+            </motion.p>
           </motion.div>
         )}
       </AnimatePresence>

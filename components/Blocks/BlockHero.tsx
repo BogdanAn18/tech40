@@ -1,15 +1,43 @@
 "use client"
 
 import Image from "next/image"
+import { motion } from "framer-motion"
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+}
+
+const imageVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.5 } },
+}
 
 export default function BlockHero() {
   return (
-    <div
+    <motion.div
       className="min-h-screen relative flex flex-col md:flex-row items-center justify-center px-6 py-12 md:py-0 overflow-hidden novice-section-bg"
       id="mission"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
     >
       {/* Декоративная иконка */}
-      <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10">
+      <motion.div
+        className="absolute top-6 left-6 md:top-10 md:left-10 z-10"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
         <Image
           src="/img/images/200.png"
           alt="Style image"
@@ -18,10 +46,13 @@ export default function BlockHero() {
           className="md:w-[120px] md:h-[120px]"
           priority
         />
-      </div>
+      </motion.div>
 
       {/* Текстовая часть */}
-      <div className="relative z-10 text-center md:text-left max-w-2xl md:mr-8">
+      <motion.div
+        className="relative z-10 text-center md:text-left max-w-2xl md:mr-8"
+        variants={itemVariants}
+      >
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-slate-900 mb-4 leading-tight">
           Центр исследований и разработки Сбера
         </h1>
@@ -36,10 +67,15 @@ export default function BlockHero() {
           опыта, анализ данных, применяя креативный подход и современные
           технологии.
         </p>
-      </div>
+      </motion.div>
 
       {/* Изображение справа (десктоп) или снизу (мобильные) */}
-      <div className="relative z-10 w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
+      <motion.div
+        className="relative z-10 w-full md:w-1/2 mt-8 md:mt-0 flex justify-center"
+        variants={imageVariants}
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+      >
         <Image
           src="/img/images/21.png"
           alt="Style image"
@@ -48,7 +84,7 @@ export default function BlockHero() {
           className="w-3/4 md:w-full max-w-md h-auto"
           priority
         />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }

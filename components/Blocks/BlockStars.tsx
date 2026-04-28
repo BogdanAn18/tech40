@@ -1,18 +1,24 @@
 "use client"
 
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export default function BlockStars() {
     return (
         <div className="flex flex-col items-center justify-center text-center min-h-screen px-6 pt-10 novice-section-bg">
             <h2 className="text-slate-900">Что пишут о нас?</h2>
             <h4 className="text-slate-700">Из пяти звёздочек нам всегда ставят пять</h4>
-            <Image
-                src="/img/images/stars-nobg.png"
-                alt="Stars"
-                width={350}
-                height={100}
-            />
+            <motion.div
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+                <Image
+                    src="/img/images/stars-nobg.png"
+                    alt="Stars"
+                    width={350}
+                    height={100}
+                />
+            </motion.div>
             <div className="max-w-2xl mx-auto space-y-6 text-left">
                 <p className="
                     m-6 p-6

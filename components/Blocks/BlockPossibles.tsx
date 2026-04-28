@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const opportunities = [
     {
@@ -74,10 +75,22 @@ export default function BlockPossibles() {
 
                 {/* Сетка карточек */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-                    {opportunities.map((item) => (
-                        <div
+                    {opportunities.map((item, index) => (
+                        <motion.div
                             key={item.id}
                             className="bg-white rounded-xl border border-gray-100 overflow-hidden flex flex-col"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                    type: "spring",
+                                    stiffness: 100,
+                                    damping: 10,
+                                    delay: index * 0.2,
+                                },
+                            }}
+                            viewport={{ once: true }}
                         >
                             {/* Изображение карточки */}
                             <div className="relative w-full h-48">
@@ -113,7 +126,7 @@ export default function BlockPossibles() {
                                     ))}
                                 </ul>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
